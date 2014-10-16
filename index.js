@@ -51,7 +51,7 @@ Object.defineProperties(History.prototype, {
       }
     );
   },
-};
+});
 
 function traverse (next) {
   if (next < 0 && next >= this._entries.length) {
