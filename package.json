@@ -1,0 +1,19 @@
+{
+  "name": "min-history",
+  "version": "0.0.0",
+  "description": "minimal browser History interface for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openappjs/min-history.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openappjs/min-history/issues"
+  },
+  "homepage": "https://github.com/openappjs/min-history"
+}
