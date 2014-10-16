@@ -1,5 +1,5 @@
 {
-  "name": "min-history",
+  "name": "mock-history",
   "version": "0.0.0",
   "description": "minimal browser History interface for node",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/openappjs/min-history.git"
+    "url": "https://github.com/openappjs/mock-history.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/openappjs/min-history/issues"
+    "url": "https://github.com/openappjs/mock-history/issues"
   },
-  "homepage": "https://github.com/openappjs/min-history"
+  "homepage": "https://github.com/openappjs/mock-history"
 }

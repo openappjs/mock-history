@@ -1,5 +1,5 @@
-# min-history
+# mock-history
 
 minimal browser History interface for node
 
-### IN-COMPLETE
+### INCOMPLETE
