@@ -3,6 +3,10 @@ var Url = require('url');
 module.exports = History;
 
 function History (win) {
+  if (!(this instanceof History)) {
+    return new History(win);
+  }
+
   this._entries = [null];
   this._current = 0;
   this._traverse = traverse;
