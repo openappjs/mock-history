@@ -94,24 +94,24 @@ function traverse (next) {
 
   if (stateChanged) {
     var popStateEvent = {
-      target: win,
+      target: this._win,
       type: "popstate",
       bubbles: true,
       cancelable: false,
       state: nextEntry.state,
     }
-    win.dispatchEvent(popStateEvent);
+    this._win.dispatchEvent(popStateEvent);
   }
 
   if (hashChanged) {
     var hashChangeEvent = {
-      target: win,
+      target: this._win,
       type: "hashchange",
       bubbles: true,
       cancelable: false,
       oldUrl: oldEntry.url,
       newUrl: nextEntry.url,
     }
-    win.dispatchEvent(hashChangeEvent);
+    this._win.dispatchEvent(hashChangeEvent);
   }
 }
