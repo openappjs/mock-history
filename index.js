@@ -114,4 +114,6 @@ function traverse (next) {
     }
     this._win.dispatchEvent(hashChangeEvent);
   }
+
+  this._win.location.href = nextEntry.url;
 }
