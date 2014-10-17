@@ -81,14 +81,14 @@ function traverse (next) {
     var oldHash = Url.parse(oldEntry.url).hash || "";
     var nextHash = Url.parse(nextEntry.url).hash || "";
 
-    if (oldHash.toLowerCase() !== newHash.toLowerCase()) {
+    if (oldHash.toLowerCase() !== nextHash.toLowerCase()) {
       return true;
     } else {
       return false;
     }
   })()
 
-  var stateChanged = (oldEntry !== newEntry);
+  var stateChanged = (oldEntry !== nextEntry);
 
   this._current = next;
 
@@ -98,7 +98,7 @@ function traverse (next) {
       type: "popstate",
       bubbles: true,
       cancelable: false,
-      state: newEntry.state,
+      state: nextEntry.state,
     }
     win.dispatchEvent(popStateEvent);
   }
@@ -110,7 +110,7 @@ function traverse (next) {
       bubbles: true,
       cancelable: false,
       oldUrl: oldEntry.url,
-      newUrl: newEntry.url,
+      newUrl: nextEntry.url,
     }
     win.dispatchEvent(hashChangeEvent);
   }
