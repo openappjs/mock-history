@@ -72,12 +72,14 @@ function traverse (next) {
     return;
   }
   
-  var oldEntry = this._entries[this._current];
-  var nextEntry = this._entries[next];
+  var oldEntry = this._entries[this._current]
+    || { url: "" };
+  var nextEntry = this._entries[next]
+    || { url: "" };
 
   var hashChanged = (function () {
-    var oldHash = Url.parse(oldEntry.url).hash;
-    var nextHash = Url.parse(nextEntry.url).hash;
+    var oldHash = Url.parse(oldEntry.url).hash || "";
+    var nextHash = Url.parse(nextEntry.url).hash || "";
 
     if (oldHash.toLowerCase() !== newHash.toLowerCase()) {
       return true;
