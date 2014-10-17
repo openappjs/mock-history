@@ -24,36 +24,46 @@ Object.defineProperties(History.prototype, {
       return this._entries[this._current].data;
     }
   },
-  go: function (delta) {
-    this._traverse(this._current + delta);
+  go: {
+    value: function (delta) {
+      this._traverse(this._current + delta);
+    },
   },
-  back: function () {
-    this.go(-1);
+  back: {
+    value: function () {
+      this.go(-1);
+    },
   },
-  forward: function () {
-    this.go(1);
+  forward: {
+    value: function () {
+      this.go(1);
+    },
   },
-  pushState: function (data, title, url) {
-    this._entries.splice(
-      this._current + 1,
-      this._entries.length - (this._current + 1),
-      {
-        data: data,
-        title: title,
-        url: url,
-      }
-    );
+  pushState: {
+    value:function (data, title, url) {
+      this._entries.splice(
+        this._current + 1,
+        this._entries.length - (this._current + 1),
+        {
+          data: data,
+          title: title,
+          url: url,
+        }
+      );
+    },
   },
-  replaceState: function (data, title, url) {
-    this._entries.splice(
-      this._current,
-      this._entries.length - this._current,
-      {
-        data: data,
-        title: title,
-        url: url,
-      }
-    );
+  replaceState: {
+    value: function (data, title, url) {
+      this._entries.splice(
+        this._current,
+        this._entries.length - this._current,
+        {
+          data: data,
+          title: title,
+          url: url,
+        }
+      );
+    },
   },
 });
 
